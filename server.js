@@ -16,8 +16,8 @@ const { publicKey: serverPublicKey, privateKey: serverPrivateKey } =
     privateKeyEncoding: { type: 'pkcs8', format: 'pem' }
   });
 
-console.log('🔐 Servidor iniciado con cifrado híbrido');
-console.log('\n📋 Clave pública del servidor:');
+console.log('Servidor iniciado con cifrado híbrido');
+console.log('\nClave pública del servidor:');
 console.log(serverPublicKey);
 
 // 1. Endpoint para obtener la clave pública del servidor
@@ -296,8 +296,8 @@ app.get('/api/info', (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`\n🚀 Servidor escuchando en http://localhost:${PORT}`);
-  console.log('\n📚 Endpoints disponibles:');
+  console.log(`\nServidor escuchando en http://localhost:${PORT}`);
+  console.log('\nEndpoints disponibles:');
   console.log('  GET  /api/info');
   console.log('  GET  /api/public-key');
   console.log('  GET  /api/generate-keys');
@@ -306,5 +306,4 @@ app.listen(PORT, () => {
   console.log('  POST /api/send-encrypted');
   console.log('  POST /api/decrypt-helper');
   console.log('  GET  /api/protected-data?clientId=xxx');
-  console.log('\n💡 Visita http://localhost:3000/api/info para más información');
 });
